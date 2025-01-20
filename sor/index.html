@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	
+<!-- Component components/gtag_events -->
+
+<script>
+    window.ccPorted = {
+        ...(window.ccPorted || {}),
+        gameID: (("soccer_random").length > 0) ? "soccer_random" : "ccported"
+    }
+    window.gameID = window.ccPorted.gameID;
+</script>
+
+
+<!-- Component components/gtag -->
+<!-- supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script>
+  window.ccPorted = {
+    version: "342.2024-12-16T17:11:00.076Z",
+    ...(window.ccPorted || {})
+  };
+  try {
+    const SUPABASE_URL = "https://dahljrdecyiwfjgklnvz.supabase.co";
+    const SUPABASE_ANON_KEY =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRhaGxqcmRlY3lpd2ZqZ2tsbnZ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjgyNjE3NzMsImV4cCI6MjA0MzgzNzc3M30.8-YlXqSXsYoPTaDlHMpTdqLxfvm89-8zk2HG2MCABRI";
+    window.ccSupaClient = supabase.createClient(
+      SUPABASE_URL,
+      SUPABASE_ANON_KEY
+    );
+  } catch (e) {
+    alert(
+      "Error Initializing. Please refresh. If this error persists, try a different domain." +
+        "\n\n" +
+        e.stack
+    );
+    console.log(e);
+  }
+</script>
+
+<!-- large.js -->
+<script src="/assets/scripts/helpers.js?i=8"></script>
+<script src="/assets/scripts/large.js?i=7"></script>
+<script src="/assets/scripts/stateHandler.js?i=6"></script>
+
+<!-- external (gtag) -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-DJDL65P9Y4"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-DJDL65P9Y4");
+  window.gtag = gtag;
+</script>
+
+<!-- End component components/gtag -->
+
+
+<script src="/gtag_events.js?v=004" data-gameid="soccer_random"></script>
+<!-- End component components/gtag_events -->
+
+    <meta charset="UTF-8" />
+    <title>Soccer Random | Unblocked on CCPorted</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+
+    <link rel="manifest" href="appmanifest.json" />
+	<meta name = "description" content = "Soccer Random is a fun two-player soccer game that you can play online for free. The game features simple controls and addictive gameplay. Play Soccer Random unblocked on CCPorted!" />
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      window.addEventListener(
+        "keydown",
+        function (e) {
+          // space and arrow keys
+          if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+            e.preventDefault();
+          }
+        },
+        false
+      );
+    </script>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script src="box2d.wasm.js"></script>
+    <noscript>
+      <div id="notSupportedWrap">
+        <h2 id="notSupportedTitle">This content requires JavaScript</h2>
+        <p class="notSupportedMessage">
+          JavaScript appears to be disabled. Please enable it to view this
+          content.
+        </p>
+        <p class="notSupportedMessage">
+          This content was created in Construct 3.
+          <a href="https://www.construct.net/en">Create games online</a>
+        </p>
+      </div>
+    </noscript>
+    <script src="scripts/supportcheck.js"></script>
+    <script src="scripts/offlineclient.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/register-sw.js"></script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<!-- Component components/gtag_events -->
+
+<script>
+    window.ccPorted = {
+        ...(window.ccPorted || {}),
+        gameID: (("riddle_school_3").length > 0) ? "riddle_school_3" : "ccported"
+    }
+    window.gameID = window.ccPorted.gameID;
+</script>
+
+
+<!-- Component components/gtag -->
+<!-- supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script>
+  window.ccPorted = {
+    version: "342.2024-12-16T17:11:00.076Z",
+    ...(window.ccPorted || {})
+  };
+  try {
+    const SUPABASE_URL = "https://dahljrdecyiwfjgklnvz.supabase.co";
+    const SUPABASE_ANON_KEY =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRhaGxqcmRlY3lpd2ZqZ2tsbnZ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjgyNjE3NzMsImV4cCI6MjA0MzgzNzc3M30.8-YlXqSXsYoPTaDlHMpTdqLxfvm89-8zk2HG2MCABRI";
+    window.ccSupaClient = supabase.createClient(
+      SUPABASE_URL,
+      SUPABASE_ANON_KEY
+    );
+  } catch (e) {
+    alert(
+      "Error Initializing. Please refresh. If this error persists, try a different domain." +
+        "\n\n" +
+        e.stack
+    );
+    console.log(e);
+  }
+</script>
+
+<!-- large.js -->
+<script src="/assets/scripts/helpers.js?i=8"></script>
+<script src="/assets/scripts/large.js?i=7"></script>
+<script src="/assets/scripts/stateHandler.js?i=6"></script>
+
+<!-- external (gtag) -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-DJDL65P9Y4"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-DJDL65P9Y4");
+  window.gtag = gtag;
+</script>
+
+<!-- End component components/gtag -->
+
+
+<script src="/gtag_events.js?v=004" data-gameid="riddle_school_3"></script>
+<!-- End component components/gtag_events -->
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel='stylesheet' href='/flash/styles.css' />
+    <title>Riddle School 3 | Unblocked on CCPorted</title>
+    <meta name="description" content = "The third installment of the Riddle School series. Help Phil escape from school once again by solving puzzles and mini-games. Unblocked and free to play on CCPorted!">
+</head>
+
+<body>
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <div id="container">
+        <div id="subContainer">
+            <div id="gameContainer"></div>
+            <div id="fullScreenBar">
+                <h3 id="gameFName"></h3>
+                <div id="fullscreen"><img src="/assets/images/fullscreen.png"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/flash/em.js" data-swf-file-src="/flash/swf/riddle_school_3.swf" data-fName="Riddle School 3">
+    </script>
+</body>
+
+</html>

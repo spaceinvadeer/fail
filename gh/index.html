@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<!-- Component components/gtag_events -->
+
+<script>
+    window.ccPorted = {
+        ...(window.ccPorted || {}),
+        gameID: (("gladihoppers").length > 0) ? "gladihoppers" : "ccported"
+    }
+    window.gameID = window.ccPorted.gameID;
+</script>
+
+
+<!-- Component components/gtag -->
+<!-- supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script>
+  window.ccPorted = {
+    version: "342.2024-12-16T17:11:00.076Z",
+    ...(window.ccPorted || {})
+  };
+  try {
+    const SUPABASE_URL = "https://dahljrdecyiwfjgklnvz.supabase.co";
+    const SUPABASE_ANON_KEY =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRhaGxqcmRlY3lpd2ZqZ2tsbnZ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjgyNjE3NzMsImV4cCI6MjA0MzgzNzc3M30.8-YlXqSXsYoPTaDlHMpTdqLxfvm89-8zk2HG2MCABRI";
+    window.ccSupaClient = supabase.createClient(
+      SUPABASE_URL,
+      SUPABASE_ANON_KEY
+    );
+  } catch (e) {
+    alert(
+      "Error Initializing. Please refresh. If this error persists, try a different domain." +
+        "\n\n" +
+        e.stack
+    );
+    console.log(e);
+  }
+</script>
+
+<!-- large.js -->
+<script src="/assets/scripts/helpers.js?i=8"></script>
+<script src="/assets/scripts/large.js?i=7"></script>
+<script src="/assets/scripts/stateHandler.js?i=6"></script>
+
+<!-- external (gtag) -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-DJDL65P9Y4"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-DJDL65P9Y4");
+  window.gtag = gtag;
+</script>
+
+<!-- End component components/gtag -->
+
+
+<script src="/gtag_events.js?v=004" data-gameid="gladihoppers"></script>
+<!-- End component components/gtag_events -->
+
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Gladihoppers | Unblocked on CCPorted</title>
+	<meta name="description" content="Gladihoppers is a fighting game where you play the role of a gladiator in an arena. Fight against other gladiators and become the champion of the arena! Unblocked and free to play on CCPorted!">
+	<script>
+	window.config = {
+		loader: 'unity',
+		debug: false,
+		maxRatio: 16 / 9,
+		minRatio: 9 / 16,
+
+		title: 'Gladihoppers',
+		thumbnail: 'thumb.png',
+		numScreenshots:  5 ,
+
+		unityVersion: '2019.3.13f1',
+		unityWebglBuildUrl: 'Assembly\/Gladihoppers.json',
+
+		fileSize:  23 ,
+		cachedDecompressedFileSizes: {
+			'Gladihoppers.data.unityweb':  17409938 ,
+			'Gladihoppers.wasm.code.unityweb':  6410659 ,
+			'Gladihoppers.wasm.framework.unityweb':  91463 ,
+		},
+	};
+	</script>
+<body>
+	<script src="master-loader.js"></script>
+
+</body>
+</html>

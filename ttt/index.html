@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+<!-- Component components/gtag_events -->
+
+<script>
+    window.ccPorted = {
+        ...(window.ccPorted || {}),
+        gameID: (("tic_tac_toe").length > 0) ? "tic_tac_toe" : "ccported"
+    }
+    window.gameID = window.ccPorted.gameID;
+</script>
+
+
+<!-- Component components/gtag -->
+<!-- supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script>
+  window.ccPorted = {
+    version: "342.2024-12-16T17:11:00.076Z",
+    ...(window.ccPorted || {})
+  };
+  try {
+    const SUPABASE_URL = "https://dahljrdecyiwfjgklnvz.supabase.co";
+    const SUPABASE_ANON_KEY =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRhaGxqcmRlY3lpd2ZqZ2tsbnZ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjgyNjE3NzMsImV4cCI6MjA0MzgzNzc3M30.8-YlXqSXsYoPTaDlHMpTdqLxfvm89-8zk2HG2MCABRI";
+    window.ccSupaClient = supabase.createClient(
+      SUPABASE_URL,
+      SUPABASE_ANON_KEY
+    );
+  } catch (e) {
+    alert(
+      "Error Initializing. Please refresh. If this error persists, try a different domain." +
+        "\n\n" +
+        e.stack
+    );
+    console.log(e);
+  }
+</script>
+
+<!-- large.js -->
+<script src="/assets/scripts/helpers.js?i=8"></script>
+<script src="/assets/scripts/large.js?i=7"></script>
+<script src="/assets/scripts/stateHandler.js?i=6"></script>
+
+<!-- external (gtag) -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-DJDL65P9Y4"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-DJDL65P9Y4");
+  window.gtag = gtag;
+</script>
+
+<!-- End component components/gtag -->
+
+
+<script src="/gtag_events.js?v=004" data-gameid="tic_tac_toe"></script>
+<!-- End component components/gtag_events -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe | Unblocked on CCPorted</title>
+    <meta name = "description" content = "Play Tic Tac Toe unblocked on CCPorted for free. No download or registration needed.">
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>Tic Tac Toe</h1>
+    <canvas id="gameCanvas"></canvas>
+    <div class="status" id="status">X's turn</div>
+    <button class="reset-btn" id="resetBtn">Reset Game</button>
+
+    <script src="index.js"></script>
+  </body>
+</html>
